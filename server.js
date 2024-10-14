@@ -1,23 +1,30 @@
 const express = require('express');
 const path = require('path');
+const compression = require('compression');
+
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Fügen Sie diese Zeile am Anfang der Datei hinzu
-const compression = require('compression');
-
-// Fügen Sie diese Zeile vor app.use(express.static(__dirname)); hinzu
 app.use(compression());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Serve static files from the current directory
-app.use(express.static(__dirname));
-
-// Route for the main page
+// Routen für die Hauptseite und die neuen Seiten
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start the server
+app.get('/linkliste', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'linkliste.html'));
+});
+
+app.get('/wiki', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'wiki.html'));
+});
+
+app.get('/downloads', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'downloads.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
