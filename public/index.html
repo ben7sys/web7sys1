@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Eine Webseite, die IT-Expertise und Ressourcen zu Netzwerken, Self-Hosting und Automatisierung bietet.">
+  <meta name="description" content="IT-Experte Benjamin Bader, Netzwerksicherheit, Datensicherheit,Prozessautomatisierung">
   <title>Meine Webseite</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,58 +15,187 @@
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html">Meine Webseite</a>
+        <span class="logo-main">7SYS</span>
+        <span class="logo-sub">IT-Experte Benjamin Bader</span>
       </div>
       <div class="menu-toggle">
         <i class="fas fa-bars"></i>
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projekte</a></li>
-        <li><a href="linkliste.html">Linkliste</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-        <li><a href="downloads.html">Downloads</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#linkliste">Linkliste</a></li>
+        <li><a href="#wiki">Wiki</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact" class="cta-button">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-content">
       <h1>Sicher. Zuverlässig. Individuell.</h1>
-      <h2>IT-Beratung für kleine und mittlere Unternehmen – maßgeschneiderte Sicherheitslösungen, die Ihre Daten schützen und Ihre Systeme optimieren.</h2>
-      <p>Ich biete unabhängige Beratung mit Fokus auf Datenschutz, Netzwerksicherheit und Cloud-Lösungen. Gemeinsam finden wir die besten Technologien für Ihr Unternehmen.</p>
-      <a href="#contact" class="cta-button">Jetzt unverbindlich beraten lassen</a>
+      <h2>IT-Beratung für kleine und mittlere Unternehmen</h2>
+      <p>Maßgeschneiderte Sicherheitslösungen, die Ihre Daten schützen und Ihre Systeme optimieren.</p>
+      <a href="#contact" class="cta-button">Jetzt beraten lassen</a>
     </div>
   </section>
 
   <!-- Main Content -->
   <main>
     <section class="intro">
-      <h1>Willkommen auf der Webseite von 7sys</h1>
-      <p class="intro-text">Diese Webseite bietet IT-Expertise zu Netzwerken, Self-Hosting und Automatisierung. Hier findest du nützliche Ressourcen und Anleitungen, um deine eigenen Projekte voranzubringen.</p>
-      <p class="intro-text2">Entdecke meine Projekte oder kontaktiere mich bei Fragen!</p>
+      <h1>IT-Expertise für Ihr Unternehmen</h1>
+      <p class="intro-text">Maßgeschneiderte Lösungen für Ihre Bedürfnisse und Sicherheit, individuell, unabhängig und zuverlässig.</p>
     </section>
 
-    <section class="projects">
-      <div class="project">
-        <h2>Projekt 1</h2>
-        <p>Kurze Beschreibung des Projekts.</p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
+    <!-- Kernkompetenzen -->
+    <section id="expertise" class="expertise">
+      <h2>Meine Kernkompetenzen</h2>
+      <div class="expertise-grid">
+        <div class="expertise-item">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Compliance-Lösungen</h3>
+          <p>Unterstützung bei der Einhaltung von Datenschutzbestimmungen wie DSGVO und NIS-2.</p>
+        </div>
+        <div class="expertise-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Netzwerksicherheit</h3>
+          <p>Umfassende Sicherheitslösungen zum Schutz Ihrer Unternehmensnetzwerke.</p>
+        </div>
+        <div class="expertise-item">
+          <i class="fas fa-lock"></i>
+          <h3>Datensicherheit</h3>
+          <p>Schutz Ihrer sensiblen Unternehmensdaten vor unbefugtem Zugriff und Verlust.</p>
         </div>
       </div>
+    </section>
 
-      <div class="project">
-        <h2>Projekt 2</h2>
-        <p>Kurze Beschreibung des Projekts.</p>
-        <div class="tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">React</span>
+    <!-- Hauptleistungen -->
+    <section id="leistungen" class="leistungen">
+      <h2>Meine Hauptleistungen</h2>
+      <div class="leistungen-grid">
+        <div class="leistung-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Firewall</h3>
+          <p>Fortschrittlicher Netzwerkschutz mit Next-Generation Firewall-Technologie.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-laptop-house"></i>
+          <h3>Remote Zugriff</h3>
+          <p>Sichere Lösungen für Fernzugriff auf Unternehmensnetzwerke und -ressourcen.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>Backup</h3>
+          <p>Zuverlässige Datensicherung und Wiederherstellungslösungen für Ihr Unternehmen.</p>
         </div>
       </div>
+    </section>
+
+    <!-- Weitere Leistungen -->
+    <section id="weitere-leistungen" class="weitere-leistungen">
+      <h2>Weitere Leistungen</h2>
+      <div class="leistungen-grid">
+        <div class="leistung-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Security</h3>
+          <p>Schutz mobiler Geräte durch Mobile Device Management (MDM).</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-virus-slash"></i>
+          <h3>Antivirus-Lösungen</h3>
+          <p>Umfassender Schutz vor Malware und Ransomware mit zentralem Management.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-envelope-open-text"></i>
+          <h3>E-Mail-Archivierung</h3>
+          <p>Revisionssichere E-Mail-Archivierung zur Einhaltung rechtlicher Anforderungen.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Endpoint Security</h3>
+          <p>Schutz von Endgeräten durch umfassende Sicherheitsfunktionen.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-user-shield"></i>
+          <h3>Security Awareness Training</h3>
+          <p>Schulungen zur Stärkung des Cybersecurity-Bewusstseins.</p>
+        </div>
+        <div class="leistung-item">
+          <i class="fas fa-door-open"></i>
+          <h3>NAC (Network Access Control)</h3>
+          <p>Kontrolle des Netzwerkzugriffs durch Identifizierung und Überprüfung aller Geräte.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beratungsleistungen -->
+    <section id="beratungsleistungen" class="beratungsleistungen">
+      <h2>Beratungsleistungen</h2>
+      <div class="beratung-grid">
+        <div class="beratung-item">
+          <i class="fas fa-server"></i>
+          <h4>IT-Infrastruktur</h4>
+          <p>Strategische Beratung zur Optimierung Ihrer IT-Infrastruktur.</p>
+        </div>
+        <div class="beratung-item">
+          <i class="fas fa-cloud"></i>
+          <h4>Cloud-Lösungen</h4>
+          <p>Beratung zu effizienten und sicheren Cloud-Implementierungen.</p>
+        </div>
+        <div class="beratung-item">
+          <i class="fas fa-database"></i>
+          <h4>Backup-Strategien</h4>
+          <p>Entwicklung maßgeschneiderter Backup- und Disaster-Recovery-Pläne.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2>Aktuelle Projekte</h2>
+      <div class="projects-grid">
+        <!-- Fügen Sie hier Ihre Projekte ein -->
+      </div>
+    </section>
+
+    <!-- Link List Section -->
+    <section id="linkliste" class="linkliste">
+      <h2>Linkliste</h2>
+      <ul>
+        <li><a href="#">Nützlicher Link 1</a></li>
+        <li><a href="#">Nützlicher Link 2</a></li>
+        <li><a href="#">Nützlicher Link 3</a></li>
+      </ul>
+    </section>
+
+    <!-- Wiki Section -->
+    <section id="wiki" class="wiki">
+      <h2>Wiki</h2>
+      <p>Hier finden Sie nützliche Informationen und Anleitungen zu verschiedenen IT-Themen.</p>
+      <!-- Add more content or links to wiki articles -->
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="downloads">
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="#">Download 1</a></li>
+        <li><a href="#">Download 2</a></li>
+        <li><a href="#">Download 3</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Kontakt</h2>
+      <form>
+        <input type="text" name="name" placeholder="Ihr Name" required>
+        <input type="email" name="email" placeholder="Ihre E-Mail" required>
+        <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Nachricht senden</button>
+      </form>
     </section>
   </main>
 
@@ -80,15 +209,6 @@
     </ul>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
