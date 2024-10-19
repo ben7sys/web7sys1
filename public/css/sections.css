@@ -146,12 +146,19 @@ section h2::after {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   transition: all 0.3s ease;
 }
 
 .download-card:hover {
   background-color: var(--color-background);
   transform: translateX(10px);
+}
+
+.download-card-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .download-card i {
@@ -163,6 +170,15 @@ section h2::after {
 
 .download-card:hover i {
   transform: scale(1.1);
+}
+
+.download-card-text {
+  flex-grow: 1;
+}
+
+.download-card .btn-download {
+  white-space: nowrap;
+  margin-left: 1rem;
 }
 
 /* Contact Section */
