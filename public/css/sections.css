@@ -9,6 +9,12 @@ section h2 {
 }
 
 /* Project Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
 .project-card {
   text-align: left;
   overflow: hidden;
@@ -16,6 +22,8 @@ section h2 {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -30,6 +38,9 @@ section h2 {
 
 .project-content {
   padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
@@ -40,6 +51,11 @@ section h2 {
 .project-description {
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-card .btn {
+  align-self: flex-start;
 }
 
 /* Link List Section */
@@ -127,4 +143,14 @@ section h2 {
 
 .contact-info p {
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
 }
