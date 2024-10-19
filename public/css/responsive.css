@@ -53,9 +53,9 @@
     display: block;
     align-self: flex-end;
     margin-top: 0rem;
-    transition: margin 0.7s ease-in-out;
+    padding-right: 1rem; 
   }
-
+  
   .nav-links {
     display: none;
     width: 100%;
@@ -171,8 +171,7 @@
     display: block;
     align-self: flex-end;
     margin-top: 0rem;
-    padding-right: 1rem;
-    
+    padding-right: 1rem; 
   }
 
   .hero {
