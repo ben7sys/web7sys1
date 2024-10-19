@@ -1,0 +1,48 @@
+/* CSS Variables */
+:root {
+  --font-primary: "Montserrat", sans-serif;
+  --color-text: #a3a3a3;
+  --color-text-light: #d0d0d0;
+  --color-header: #ffffff;
+  --color-background: #111111;
+  --color-background-light: #1a1a1a;
+  --color-background-lighter: #252525;
+  --color-highlight: #306dcb;
+  --color-highlight-hover: #2555a0;
+  --color-tag: #333333;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+
+/* Lazy Loading */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}

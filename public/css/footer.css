@@ -1,0 +1,31 @@
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--color-background);
+  margin-top: 2rem;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background-light);
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin: 1rem 0;
+}
+
+.social-icons li {
+  margin: 0 0.5rem;
+}
+
+.social-icons a {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+.social-icons i:hover {
+  color: var(--color-highlight);
+  transform: rotate(-15deg);
+}

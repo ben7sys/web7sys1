@@ -1,0 +1,96 @@
+/* Sections */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Project Section */
+.project-card {
+  composes: card;
+  text-align: left;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Link List Section */
+.link-card {
+  composes: card;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-card i {
+  color: var(--color-highlight);
+}
+
+/* Wiki Section */
+.wiki-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.wiki-card {
+  composes: card;
+  text-align: left;
+}
+
+/* Downloads Section */
+.download-card {
+  composes: card;
+  text-decoration: none;
+  color: inherit;
+}
+
+.download-card i {
+  color: var(--color-highlight);
+}
+
+/* Contact Section */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-info {
+  background-color: var(--color-background-light);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}

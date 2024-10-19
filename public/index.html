@@ -159,47 +159,122 @@
     <!-- Projects Section -->
     <section id="projects" class="mb-2">
       <h2>Aktuelle Projekte</h2>
-      <div class="grid grid-2">
-        <!-- Fügen Sie hier Ihre Projekte ein -->
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="img/project-placeholder-1.jpg" alt="Projekt 1" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Projekt 1: Automatisierte Sicherheitsanalyse</h3>
+            <p class="project-description">Entwicklung eines KI-gestützten Systems zur kontinuierlichen Überwachung und Analyse von Netzwerksicherheitsrisiken.</p>
+            <a href="#" class="btn btn-secondary">Mehr erfahren</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="img/project-placeholder-2.jpg" alt="Projekt 2" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Projekt 2: Nachhaltige Rechenzentren</h3>
+            <p class="project-description">Implementation von energieeffizienten Kühlsystemen und erneuerbaren Energiequellen für umweltfreundliche Rechenzentren.</p>
+            <a href="#" class="btn btn-secondary">Mehr erfahren</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Link List Section -->
     <section id="linkliste" class="mb-2">
       <h2>Linkliste</h2>
-      <ul>
-        <li><a href="#">Nützlicher Link 1</a></li>
-        <li><a href="#">Nützlicher Link 2</a></li>
-        <li><a href="#">Nützlicher Link 3</a></li>
-      </ul>
+      <div class="link-grid">
+        <a href="#" class="link-card">
+          <i class="fas fa-book"></i>
+          <h3>IT-Sicherheit Grundlagen</h3>
+          <p>Umfassende Einführung in die Grundlagen der IT-Sicherheit</p>
+        </a>
+        <a href="#" class="link-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Best Practices für Netzwerksicherheit</h3>
+          <p>Aktuelle Best Practices zur Absicherung von Unternehmensnetzwerken</p>
+        </a>
+        <a href="#" class="link-card">
+          <i class="fas fa-cloud"></i>
+          <h3>Cloud Security Alliance</h3>
+          <p>Ressourcen und Richtlinien für sichere Cloud-Implementierungen</p>
+        </a>
+      </div>
     </section>
 
     <!-- Wiki Section -->
     <section id="wiki" class="mb-2">
       <h2>Wiki</h2>
-      <p>Hier finden Sie nützliche Informationen und Anleitungen zu verschiedenen IT-Themen.</p>
-      <!-- Add more content or links to wiki articles -->
+      <p class="wiki-intro">Hier finden Sie nützliche Informationen und Anleitungen zu verschiedenen IT-Themen.</p>
+      <div class="wiki-grid">
+        <article class="wiki-card">
+          <h3>Firewall-Konfiguration</h3>
+          <p>Schritt-für-Schritt-Anleitung zur optimalen Konfiguration Ihrer Firewall</p>
+          <a href="#" class="btn btn-tertiary">Zum Artikel</a>
+        </article>
+        <article class="wiki-card">
+          <h3>Datenschutz-Grundverordnung (DSGVO)</h3>
+          <p>Überblick über die wichtigsten Anforderungen der DSGVO</p>
+          <a href="#" class="btn btn-tertiary">Zum Artikel</a>
+        </article>
+        <article class="wiki-card">
+          <h3>Sichere Passwörter</h3>
+          <p>Tipps zur Erstellung und Verwaltung sicherer Passwörter</p>
+          <a href="#" class="btn btn-tertiary">Zum Artikel</a>
+        </article>
+      </div>
     </section>
 
     <!-- Downloads Section -->
     <section id="downloads" class="mb-2">
       <h2>Downloads</h2>
-      <ul>
-        <li><a href="#">Download 1</a></li>
-        <li><a href="#">Download 2</a></li>
-        <li><a href="#">Download 3</a></li>
-      </ul>
+      <div class="download-grid">
+        <a href="#" class="download-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>IT-Sicherheitsleitfaden</h3>
+          <p>Umfassender Leitfaden zur Verbesserung der IT-Sicherheit in Ihrem Unternehmen</p>
+          <span class="btn btn-download">Herunterladen</span>
+        </a>
+        <a href="#" class="download-card">
+          <i class="fas fa-file-excel"></i>
+          <h3>Sicherheits-Checkliste</h3>
+          <p>Excel-Dokument zur Überprüfung der IT-Sicherheit in Ihrem Unternehmen</p>
+          <span class="btn btn-download">Herunterladen</span>
+        </a>
+        <a href="#" class="download-card">
+          <i class="fas fa-file-powerpoint"></i>
+          <h3>Präsentation: Cyber-Bedrohungen</h3>
+          <p>Informative Präsentation über aktuelle Cyber-Bedrohungen und Gegenmaßnahmen</p>
+          <span class="btn btn-download">Herunterladen</span>
+        </a>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
       <h2>Kontakt</h2>
-      <form>
-        <input type="text" name="name" placeholder="Ihr Name" required>
-        <input type="email" name="email" placeholder="Ihre E-Mail" required>
-        <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit" class="btn">Nachricht senden</button>
-      </form>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" placeholder="Ihre Nachricht" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+        <div class="contact-info">
+          <h3>Kontaktinformationen</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 12345 Musterstadt</p>
+          <p><i class="fas fa-phone"></i> +49 123 456789</p>
+          <p><i class="fas fa-envelope"></i> info@7sys.de</p>
+        </div>
+      </div>
     </section>
   </main>
 
