@@ -40,22 +40,24 @@ nav {
   color: transparent; /* Make text transparent for background-clip effect */
   text-align: center;
   margin-left: 0.5rem; /* Added margin for spacing between logo-main and logo-sub */
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); /* Brighter gradient */
   background-clip: text;
   -webkit-background-clip: text;
+  background-size: 200% auto; /* Ensure enough space for animation */
   transition: all .3s ease-in-out;
-  animation: pulsateEffect 2s infinite; /* Ensure only one animation is applied */
+  animation: shinyEffect 12s infinite linear; /* Smooth, slower animation */
 }
-
 
 @keyframes shinyEffect {
   0% {
-    background-position: -100%;
+    background-position: 200% 0; /* Start from the right for reversed direction */
   }
   100% {
-    background-position: 200%;
+    background-position: -200% 0; /* Move to the left */
   }
 }
+
+
 
 .nav-links {
   display: flex;
