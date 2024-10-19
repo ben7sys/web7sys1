@@ -53,7 +53,7 @@
     display: block;
     align-self: flex-end;
     margin-top: 0rem;
-    transition: margin 0.3s ease-in-out;
+    transition: margin 0.7s ease-in-out;
   }
 
   .nav-links {
@@ -165,6 +165,14 @@
   .logo-sub {
     font-size: 0.8rem; /* Adjusted size for better readability */
     transition: font-size 0.3s ease-in-out;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: 0rem;
+    padding-right: 1rem;
+    transition: margin 0.7s ease-in-out;
   }
 
   .hero {
