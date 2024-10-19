@@ -54,15 +54,15 @@
   }
 
   .hero {
-    padding: 6rem 0 3rem;
+    padding: 4rem 0 2rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Footer-spezifische Stile */
@@ -74,6 +74,29 @@
   .legal-links {
     margin-top: 1rem;
     justify-content: center;
+  }
+
+  section {
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .link-card,
+  .wiki-card,
+  .download-card,
+  .contact-info {
+    padding: 1rem;
   }
 }
 
@@ -87,7 +110,7 @@
   }
 
   .hero {
-    padding: 5rem 0 3rem;
+    padding: 3rem 0 2rem;
   }
 
   .hero h1 {
@@ -105,5 +128,30 @@
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-card,
+  .link-card,
+  .wiki-card,
+  .download-card,
+  .contact-info {
+    border-radius: 8px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description,
+  .wiki-intro {
+    font-size: 0.85rem;
   }
 }
