@@ -98,6 +98,19 @@
   .contact-info {
     padding: 1rem;
   }
+
+  .contact-container {
+    gap: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem;
+  }
+
+  .contact-info {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -153,5 +166,22 @@
   .project-description,
   .wiki-intro {
     font-size: 0.85rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
   }
 }
