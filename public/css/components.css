@@ -16,7 +16,21 @@
 }
 
 .cta-button {
-  composes: btn;
+  /* Extend .btn styles and add specific styles for CTA */
+  display: inline-block;
+  background-color: var(--color-highlight);
+  color: var(--color-header);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.1rem;
+}
+
+.cta-button:hover {
+  background-color: var(--color-highlight-hover);
+  transform: translateY(-3px);
 }
 
 /* Cards */
@@ -26,6 +40,7 @@
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
@@ -59,10 +74,22 @@ textarea {
   min-height: 150px;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-highlight);
+  box-shadow: 0 0 0 2px rgba(var(--color-highlight-rgb), 0.2);
+}
+
 @media screen and (max-width: 480px) {
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
   }
 
   .card {
