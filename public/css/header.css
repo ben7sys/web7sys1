@@ -1,20 +1,20 @@
 /* Header */
 header {
-  background: linear-gradient(25deg, rgba(14, 14, 14, 0.9), rgba(41, 41, 41, 0.9)); /* Weicher, transparenter Gradient */
-  padding: 0.2rem 0; /* Etwas mehr Padding für bessere Lesbarkeit */
+  background: linear-gradient(25deg, rgba(14, 14, 14, 0.9), rgba(41, 41, 41, 0.9));
+  padding: 0.2rem 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtiler Schatten für Tiefe */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 header:hover {
-  background: linear-gradient(50deg, rgba(14, 14, 14, 1), rgba(51, 51, 51, 1)); /* Hover: intensiverer Gradient */
-  transform: translateY(0px); /* Leichter Hover-Effect, hebt das Element an */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Verstärkter Schatten beim Hover */
+  background: linear-gradient(50deg, rgba(14, 14, 14, 1), rgba(51, 51, 51, 1));
+  transform: translateY(0px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -25,39 +25,37 @@ nav {
 
 .logo {
   display: flex;
-  flex-direction: row; /* Changed to row to place logo-sub to the right of logo-main */
-  align-items: center; /* Center align items vertically */
+  flex-direction: row;
+  align-items: center;
 }
 
 .logo-main {
-  font-size: 2.5rem; /* Adjusted size for better visibility */
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-highlight);
 }
 
 .logo-sub {
   font-size: 1rem;
-  color: transparent; /* Make text transparent for background-clip effect */
+  color: transparent;
   text-align: center;
-  margin-left: 0.5rem; /* Added margin for spacing between logo-main and logo-sub */
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)); /* Brighter gradient */
+  margin-left: 0.5rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
   background-clip: text;
   -webkit-background-clip: text;
-  background-size: 200% auto; /* Ensure enough space for animation */
+  background-size: 200% auto;
   transition: all .3s ease-in-out;
-  animation: shinyEffect 12s infinite linear; /* Smooth, slower animation */
+  animation: shinyEffect 12s infinite linear;
 }
 
 @keyframes shinyEffect {
   0% {
-    background-position: 200% 0; /* Start from the right for reversed direction */
+    background-position: 200% 0;
   }
   100% {
-    background-position: -200% 0; /* Move to the left */
+    background-position: -200% 0;
   }
 }
-
-
 
 .nav-links {
   display: flex;
@@ -84,4 +82,10 @@ nav {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none; /* Remove white background */
+  border: none; /* Remove border */
+  color: var(--color-text-light); /* Ensure icon is visible */
 }

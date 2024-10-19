@@ -52,7 +52,7 @@
   .menu-toggle {
     display: block;
     align-self: flex-end;
-    margin-top: -2rem;
+    margin-top: 0rem;
     transition: margin 0.3s ease-in-out;
   }
 
@@ -80,8 +80,9 @@
   }
 
   .hero {
-    padding: 5rem 0 3rem;
-    transition: padding 0.3s ease-in-out;
+    padding: 7rem 0 3rem;
+    margin-top: 1rem;
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
   }
 
   .hero h1 {
@@ -167,8 +168,9 @@
   }
 
   .hero {
-    padding: 4rem 0 3rem;
-    transition: padding 0.3s ease-in-out;
+    padding: 5rem 0 3rem;
+    margin-top: 1rem;
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
   }
 
   .hero h1 {
