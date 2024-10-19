@@ -1,13 +1,13 @@
 /* Header */
 header {
-  background: var(--color-background);
-  padding: 0.5rem 0;
+  background: linear-gradient(90deg, #1a1a1a, #333);
+  padding: 0.5rem 0; /* Increased padding for better spacing */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav {
@@ -23,14 +23,15 @@ nav {
 }
 
 .logo-main {
-  font-size: 1.5rem;
+  font-size: 2.5rem; /* Adjusted size for better visibility */
   font-weight: 700;
   color: var(--color-highlight);
 }
 
 .logo-sub {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: var(--color-text);
+  text-align: center;
 }
 
 .nav-links {
@@ -40,13 +41,18 @@ nav {
 }
 
 .nav-links li:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .nav-links a {
   color: var(--color-text-light);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-highlight);
 }
 
 .menu-toggle {
