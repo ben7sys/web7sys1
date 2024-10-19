@@ -5,43 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="IT-Experte Benjamin Bader, Netzwerksicherheit, Datensicherheit, Prozessautomatisierung">
   <title>7SYS - Automated Systems</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <header class="main-header">
     <nav class="container">
       <div class="logo">
         <span class="logo-main">7SYS</span>
         <span class="logo-sub">automated systems to improve the world and beyond</span>
       </div>
-      <div class="menu-toggle">
+      <button class="menu-toggle" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#linkliste">Linkliste</a></li>
         <li><a href="#wiki">Wiki</a></li>
         <li><a href="#downloads">Downloads</a></li>
-        <li><a href="#contact" class="btn">Kontakt</a></li>
+        <li><a href="#contact" class="btn btn-primary">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>SEVEN SYSTEMS</h1>
-      <h2>automated systems to improve the world and beyond</h2>
-      <p>Automatische Systeme für eine nachhaltige und liebevolle Zukunft.</p>
-      <a href="#contact" class="cta-button">Abonnieren</a>
+    <div class="hero-content container">
+      <h1 class="hero-title">SEVEN SYSTEMS</h1>
+      <h2 class="hero-subtitle">automated systems to improve the world and beyond</h2>
+      <p class="hero-text">Automatische Systeme für eine nachhaltige und liebevolle Zukunft.</p>
+      <a href="#contact" class="btn btn-primary cta-button">Abonnieren</a>
     </div>
   </section>
 
   <main class="container">
-    <!-- Vision and Mission Section -->
     <section id="vision-mission" class="grid grid-2">
       <div class="card">
         <h2>Vision</h2>
@@ -53,125 +52,120 @@
       </div>
     </section>
 
-    <!-- Kernkompetenzen -->
-    <section id="expertise" class="mb-2">
+    <section id="expertise" class="mb-4">
       <h2>Kernkompetenzen</h2>
       <div class="grid grid-3">
         <div class="card">
-          <i class="fas fa-clipboard-check"></i>
+          <i class="fas fa-clipboard-check card-icon"></i>
           <h3>Compliance-Lösungen</h3>
           <p>Unterstützung bei der Einhaltung von Datenschutzbestimmungen wie DSGVO und NIS-2.</p>
         </div>
         <div class="card">
-          <i class="fas fa-shield-alt"></i>
+          <i class="fas fa-shield-alt card-icon"></i>
           <h3>Netzwerksicherheit</h3>
           <p>Umfassende Sicherheitslösungen zum Schutz Ihrer Unternehmensnetzwerke.</p>
         </div>
         <div class="card">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock card-icon"></i>
           <h3>Datensicherheit</h3>
           <p>Schutz Ihrer sensiblen Unternehmensdaten vor unbefugtem Zugriff und Verlust.</p>
         </div>
       </div>
     </section>
 
-    <!-- Hauptleistungen -->
-    <section id="leistungen" class="mb-2">
+    <section id="leistungen" class="mb-4">
       <h2>Leistungen</h2>
       <div class="grid grid-3">
         <div class="card">
-          <i class="fas fa-shield-alt"></i>
+          <i class="fas fa-shield-alt card-icon"></i>
           <h3>Firewall</h3>
           <p>Fortschrittlicher Netzwerkschutz mit Next-Generation Firewall-Technologie.</p>
         </div>
         <div class="card">
-          <i class="fas fa-laptop-house"></i>
+          <i class="fas fa-laptop-house card-icon"></i>
           <h3>Remote Zugriff</h3>
           <p>Sichere Lösungen für Fernzugriff auf Unternehmensnetzwerke und -ressourcen.</p>
         </div>
         <div class="card">
-          <i class="fas fa-cloud-upload-alt"></i>
+          <i class="fas fa-cloud-upload-alt card-icon"></i>
           <h3>Backup</h3>
           <p>Zuverlässige Datensicherung und Wiederherstellungslösungen für Ihr Unternehmen.</p>
         </div>
       </div>
     </section>
 
-    <!-- Weitere Leistungen -->
-    <section id="weitere-leistungen" class="mb-2">
+    <section id="weitere-leistungen" class="mb-4">
       <h2>Weitere Leistungen</h2>
       <div class="grid grid-3">
         <div class="card">
-          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-mobile-alt card-icon"></i>
           <h3>Mobile Security</h3>
           <p>Schutz mobiler Geräte durch Mobile Device Management (MDM).</p>
         </div>
         <div class="card">
-          <i class="fas fa-virus-slash"></i>
+          <i class="fas fa-virus-slash card-icon"></i>
           <h3>Antivirus-Lösungen</h3>
           <p>Umfassender Schutz vor Malware und Ransomware mit zentralem Management.</p>
         </div>
         <div class="card">
-          <i class="fas fa-envelope-open-text"></i>
+          <i class="fas fa-envelope-open-text card-icon"></i>
           <h3>E-Mail-Archivierung</h3>
           <p>Revisionssichere E-Mail-Archivierung zur Einhaltung rechtlicher Anforderungen.</p>
         </div>
         <div class="card">
-          <i class="fas fa-laptop-code"></i>
+          <i class="fas fa-laptop-code card-icon"></i>
           <h3>Endpoint Security</h3>
           <p>Schutz von Endgeräten durch umfassende Sicherheitsfunktionen.</p>
         </div>
         <div class="card">
-          <i class="fas fa-user-shield"></i>
+          <i class="fas fa-user-shield card-icon"></i>
           <h3>Security Awareness Training</h3>
           <p>Schulungen zur Stärkung des Cybersecurity-Bewusstseins.</p>
         </div>
         <div class="card">
-          <i class="fas fa-door-open"></i>
+          <i class="fas fa-door-open card-icon"></i>
           <h3>NAC (Network Access Control)</h3>
           <p>Kontrolle des Netzwerkzugriffs durch Identifizierung und Überprüfung aller Geräte.</p>
         </div>
       </div>
     </section>
 
-    <!-- Beratungsleistungen -->
-    <section id="beratungsleistungen" class="mb-2">
+    <section id="beratungsleistungen" class="mb-4">
       <h2>Beratungsleistungen</h2>
       <div class="grid grid-3">
         <div class="card">
-          <i class="fas fa-server"></i>
+          <i class="fas fa-server card-icon"></i>
           <h3>IT-Infrastruktur</h3>
           <p>Strategische Beratung zur Optimierung Ihrer IT-Infrastruktur.</p>
         </div>
         <div class="card">
-          <i class="fas fa-cloud"></i>
+          <i class="fas fa-cloud card-icon"></i>
           <h3>Cloud-Lösungen</h3>
           <p>Beratung zu effizienten und sicheren Cloud-Implementierungen.</p>
         </div>
         <div class="card">
-          <i class="fas fa-database"></i>
+          <i class="fas fa-database card-icon"></i>
           <h3>Backup-Strategien</h3>
           <p>Entwicklung maßgeschneiderter Backup- und Disaster-Recovery-Pläne.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="mb-2">
+    <section id="projects" class="mb-4">
       <h2>Aktuelle Projekte</h2>
       <div class="project-grid">
-        <article class="project-card card">
+        <article class="project-card">
           <img src="img/project-placeholder-1.jpg" alt="Projekt 1" class="project-image lazyload">
           <div class="project-content">
-            <h3 class="project-title">Projekt 1: Automatisierte Sicherheitsanalyse</h3>
+            <h3 class="project-title">Automatisierte Sicherheitsanalyse</h3>
             <p class="project-description">Entwicklung eines KI-gestützten Systems zur kontinuierlichen Überwachung und Analyse von Netzwerksicherheitsrisiken.</p>
             <a href="#" class="btn btn-secondary">Mehr erfahren</a>
           </div>
         </article>
-        <article class="project-card card">
+        <article class="project-card">
           <img src="img/project-placeholder-2.jpg" alt="Projekt 2" class="project-image lazyload">
           <div class="project-content">
-            <h3 class="project-title">Projekt 2: Nachhaltige Rechenzentren</h3>
+            <h3 class="project-title">Nachhaltige Rechenzentren</h3>
             <p class="project-description">Implementation von energieeffizienten Kühlsystemen und erneuerbaren Energiequellen für umweltfreundliche Rechenzentren.</p>
             <a href="#" class="btn btn-secondary">Mehr erfahren</a>
           </div>
@@ -179,30 +173,34 @@
       </div>
     </section>
 
-    <!-- Link List Section -->
-    <section id="linkliste" class="mb-2">
+    <section id="linkliste" class="mb-4">
       <h2>Linkliste</h2>
       <div class="link-grid">
         <a href="#" class="link-card">
           <i class="fas fa-book"></i>
-          <h3>IT-Sicherheit Grundlagen</h3>
-          <p>Umfassende Einführung in die Grundlagen der IT-Sicherheit</p>
+          <div>
+            <h3>IT-Sicherheit Grundlagen</h3>
+            <p>Umfassende Einführung in die Grundlagen der IT-Sicherheit</p>
+          </div>
         </a>
         <a href="#" class="link-card">
           <i class="fas fa-shield-alt"></i>
-          <h3>Best Practices für Netzwerksicherheit</h3>
-          <p>Aktuelle Best Practices zur Absicherung von Unternehmensnetzwerken</p>
+          <div>
+            <h3>Best Practices für Netzwerksicherheit</h3>
+            <p>Aktuelle Best Practices zur Absicherung von Unternehmensnetzwerken</p>
+          </div>
         </a>
         <a href="#" class="link-card">
           <i class="fas fa-cloud"></i>
-          <h3>Cloud Security Alliance</h3>
-          <p>Ressourcen und Richtlinien für sichere Cloud-Implementierungen</p>
+          <div>
+            <h3>Cloud Security Alliance</h3>
+            <p>Ressourcen und Richtlinien für sichere Cloud-Implementierungen</p>
+          </div>
         </a>
       </div>
     </section>
 
-    <!-- Wiki Section -->
-    <section id="wiki" class="mb-2">
+    <section id="wiki" class="mb-4">
       <h2>Wiki</h2>
       <p class="wiki-intro">Hier finden Sie nützliche Informationen und Anleitungen zu verschiedenen IT-Themen.</p>
       <div class="wiki-grid">
@@ -224,33 +222,37 @@
       </div>
     </section>
 
-    <!-- Downloads Section -->
-    <section id="downloads" class="mb-2">
+    <section id="downloads" class="mb-4">
       <h2>Downloads</h2>
       <div class="download-grid">
         <a href="#" class="download-card">
           <i class="fas fa-file-pdf"></i>
-          <h3>IT-Sicherheitsleitfaden</h3>
-          <p>Umfassender Leitfaden zur Verbesserung der IT-Sicherheit in Ihrem Unternehmen</p>
+          <div>
+            <h3>IT-Sicherheitsleitfaden</h3>
+            <p>Umfassender Leitfaden zur Verbesserung der IT-Sicherheit in Ihrem Unternehmen</p>
+          </div>
           <span class="btn btn-download">Herunterladen</span>
         </a>
         <a href="#" class="download-card">
           <i class="fas fa-file-excel"></i>
-          <h3>Sicherheits-Checkliste</h3>
-          <p>Excel-Dokument zur Überprüfung der IT-Sicherheit in Ihrem Unternehmen</p>
+          <div>
+            <h3>Sicherheits-Checkliste</h3>
+            <p>Excel-Dokument zur Überprüfung der IT-Sicherheit in Ihrem Unternehmen</p>
+          </div>
           <span class="btn btn-download">Herunterladen</span>
         </a>
         <a href="#" class="download-card">
           <i class="fas fa-file-powerpoint"></i>
-          <h3>Präsentation: Cyber-Bedrohungen</h3>
-          <p>Informative Präsentation über aktuelle Cyber-Bedrohungen und Gegenmaßnahmen</p>
+          <div>
+            <h3>Präsentation: Cyber-Bedrohungen</h3>
+            <p>Informative Präsentation über aktuelle Cyber-Bedrohungen und Gegenmaßnahmen</p>
+          </div>
           <span class="btn btn-download">Herunterladen</span>
         </a>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="mb-4">
       <h2>Kontakt</h2>
       <div class="contact-container">
         <form class="contact-form">
@@ -263,6 +265,10 @@
             <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
           </div>
           <div class="form-group">
+            <label for="subject">Betreff</label>
+            <input type="text" id="subject" name="subject" placeholder="Betreff Ihrer Nachricht" required>
+          </div>
+          <div class="form-group">
             <label for="message">Nachricht</label>
             <textarea id="message" name="message" placeholder="Ihre Nachricht" required></textarea>
           </div>
@@ -273,21 +279,27 @@
           <p><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 12345 Musterstadt</p>
           <p><i class="fas fa-phone"></i> +49 123 456789</p>
           <p><i class="fas fa-envelope"></i> info@7sys.de</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <footer class="main-footer">
     <div class="container">
-      <p>made with <span class="heart">❤️</span> by <a href="#">7sys</a></p>
-      <ul class="social-icons">
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-github"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-      </ul>
-      <p><a href="impressum.html">Impressum</a></p>
+      <div class="footer-content">
+        <p>made with <span class="heart">❤️</span> by <a href="#">7sys</a></p>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">AGB</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; 2023 7SYS. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
 
