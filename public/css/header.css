@@ -37,9 +37,24 @@ nav {
 
 .logo-sub {
   font-size: 1rem;
-  color: var(--color-text);
+  color: transparent; /* Make text transparent for background-clip effect */
   text-align: center;
   margin-left: 0.5rem; /* Added margin for spacing between logo-main and logo-sub */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all .3s ease-in-out;
+  animation: pulsateEffect 2s infinite; /* Ensure only one animation is applied */
+}
+
+
+@keyframes shinyEffect {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 
 .nav-links {
