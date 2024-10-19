@@ -15,15 +15,17 @@
   --font-size-social-icons: 1.3rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .container {
-    padding: var(--padding-container);
-  }
 
+/********** 1024px **********/
+
+@media screen and (max-width: 1024px) {
   h1 { font-size: var(--font-size-h1); }
   h2 { font-size: var(--font-size-h2); }
   h3 { font-size: var(--font-size-h3); }
 }
+
+
+/********** 768px **********/
 
 @media screen and (max-width: 768px) {
   .grid-2,
@@ -35,7 +37,7 @@
   }
 
   header {
-    padding: 0.5rem 0; /* Consistent padding for better spacing */
+    padding: 0.5rem 0;
   }
 
   nav {
@@ -155,6 +157,8 @@
     transition: margin 0.3s ease-in-out;
   }
 }
+
+/********** 480px **********/
 
 @media screen and (max-width: 480px) {
   .logo-main {
