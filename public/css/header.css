@@ -1,7 +1,7 @@
 /* Header */
 header {
-  background: linear-gradient(90deg, #1a1a1a, #333);
-  padding: 0.5rem 0; /* Increased padding for better spacing */
+  background: linear-gradient(90deg, #0E0E0E, #333);
+  padding: 0.1rem 0; /* Increased padding for better spacing */
   position: fixed;
   top: 0;
   left: 0;
@@ -18,8 +18,8 @@ nav {
 
 .logo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row; /* Changed to row to place logo-sub to the right of logo-main */
+  align-items: center; /* Center align items vertically */
 }
 
 .logo-main {
@@ -32,6 +32,7 @@ nav {
   font-size: 1rem;
   color: var(--color-text);
   text-align: center;
+  margin-left: 0.5rem; /* Added margin for spacing between logo-main and logo-sub */
 }
 
 .nav-links {
