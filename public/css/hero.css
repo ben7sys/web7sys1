@@ -33,3 +33,48 @@
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
+
+/********** 768px **********/
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 7rem 0 3rem;
+    margin-top: 1rem;
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-hero-h1);
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .hero h2 {
+    font-size: var(--font-size-hero-h2);
+    transition: font-size 0.3s ease-in-out;
+  }
+}
+
+/********** 480px **********/
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 5rem 0 3rem;
+    margin-top: 1rem;
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-hero-h1);
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .hero h2 {
+    font-size: var(--font-size-hero-h2);
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+    transition: font-size 0.3s ease-in-out;
+  }
+}

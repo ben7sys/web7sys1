@@ -264,3 +264,99 @@ section h2::after {
   color: var(--color-highlight);
 }
 
+/********** 768px **********/
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+    transition: margin 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+
+  section h2 {
+    font-size: var(--font-size-section-h2);
+    margin-bottom: 2rem;
+    transition: font-size 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .project-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project-card,
+  .link-card,
+  .wiki-card,
+  .download-card,
+  .contact-info {
+    padding: 1rem;
+    transition: padding 0.3s ease-in-out;
+  }
+
+  .contact-container {
+    gap: 2rem;
+    transition: gap 0.3s ease-in-out;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem;
+    transition: padding 0.3s ease-in-out;
+  }
+
+  .contact-info {
+    padding: var(--padding-contact-info);
+    transition: padding 0.3s ease-in-out;
+  }
+
+  #home {
+    margin-top: 20px;
+    transition: margin 0.3s ease-in-out;
+  }
+}
+
+/********** 480px **********/
+
+@media screen and (max-width: 480px) {
+  .project-card,
+  .link-card,
+  .wiki-card,
+  .download-card,
+  .contact-info {
+    border-radius: 8px;
+    transition: border-radius 0.3s ease-in-out;
+  }
+
+  .project-image {
+    height: 150px;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .project-description,
+  .wiki-intro {
+    font-size: 0.85rem;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .contact-info h3 {
+    font-size: var(--font-size-contact-info-h3);
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .contact-info p {
+    font-size: var(--font-size-contact-info-p);
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: var(--font-size-contact-form);
+    transition: font-size 0.3s ease-in-out;
+  }
+}

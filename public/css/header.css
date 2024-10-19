@@ -89,3 +89,73 @@ nav {
   border: none; /* Remove border */
   color: var(--color-text-light); /* Ensure icon is visible */
 }
+
+/********** 768px **********/
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0.5rem 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+    transition: margin 0.3s ease-in-out;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: 0rem;
+    padding-right: 1rem; 
+  }
+  
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-background);
+    padding: 1rem;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+    transition: margin 0.3s ease-in-out;
+  }
+}
+
+/********** 480px **********/
+
+@media screen and (max-width: 480px) {
+  .logo-main {
+    font-size: 1.5rem; /* Adjusted size for better visibility */
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .logo-sub {
+    font-size: 0.8rem; /* Adjusted size for better readability */
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: 0rem;
+    padding-right: 1rem; 
+  }
+}

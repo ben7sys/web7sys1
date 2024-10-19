@@ -11,6 +11,19 @@
   --color-highlight: #3a7be0;
   --color-highlight-hover: #2a5fb0;
   --color-tag: #383838;
+  --font-size-h1: 2.2rem;
+  --font-size-h2: 1.8rem;
+  --font-size-h3: 1.3rem;
+  --padding-container: 0 1.5rem;
+  --padding-hero: 4rem 0 2rem;
+  --padding-contact-info: 2rem;
+  --font-size-hero-h1: 1.8rem;
+  --font-size-hero-h2: 0.9rem;
+  --font-size-section-h2: 1.6rem;
+  --font-size-contact-info-h3: 1.3rem;
+  --font-size-contact-info-p: 0.9rem;
+  --font-size-contact-form: 0.9rem;
+  --font-size-social-icons: 1.3rem;
 }
 
 /* Reset and Base Styles */
@@ -94,4 +107,12 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-highlight-hover);
+}
+
+/********** 1024px **********/
+
+@media screen and (max-width: 1024px) {
+  h1 { font-size: var(--font-size-h1); }
+  h2 { font-size: var(--font-size-h2); }
+  h3 { font-size: var(--font-size-h3); }
 }
