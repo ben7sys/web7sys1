@@ -3,7 +3,7 @@
   display: inline-block;
   background-color: var(--color-highlight);
   color: var(--color-header);
-  padding: 0.75rem 1.5rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
@@ -44,10 +44,10 @@
 }
 
 .cta-button {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 }
 
 /* Cards */

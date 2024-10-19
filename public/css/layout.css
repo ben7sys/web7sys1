@@ -18,20 +18,3 @@
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
-
-@media screen and (max-width: 1024px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-}
