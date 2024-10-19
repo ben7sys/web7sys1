@@ -133,7 +133,7 @@ header:hover {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background: rgba(41, 41, 41, 0.95); /* Hintergrund für das aufgeklappte Menü */
+    background: rgba(0, 0, 0); /* Hintergrund für das aufgeklappte Menü */
     padding: 20px;
     position: absolute;
     top: 100%; /* Unterhalb des Headers platzieren */
@@ -145,6 +145,7 @@ header:hover {
 
   .nav-menu.active {
     display: flex;
+    
   }
 
   .nav-menu a {
