@@ -1,12 +1,28 @@
 /* Responsive Design */
+:root {
+  --font-size-h1: 2.2rem;
+  --font-size-h2: 1.8rem;
+  --font-size-h3: 1.3rem;
+  --padding-container: 0 1.5rem;
+  --padding-hero: 4rem 0 2rem;
+  --font-size-hero-h1: 1.8rem;
+  --font-size-hero-h2: 0.9rem;
+  --font-size-section-h2: 1.6rem;
+  --padding-contact-info: 2rem;
+  --font-size-contact-info-h3: 1.3rem;
+  --font-size-contact-info-p: 0.9rem;
+  --font-size-contact-form: 0.9rem;
+  --font-size-social-icons: 1.3rem;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
-    padding: 0 1.5rem;
+    padding: var(--padding-container);
   }
 
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.3rem; }
+  h1 { font-size: var(--font-size-h1); }
+  h2 { font-size: var(--font-size-h2); }
+  h3 { font-size: var(--font-size-h3); }
 }
 
 @media screen and (max-width: 768px) {
@@ -54,18 +70,18 @@
   }
 
   .hero {
-    padding: 4rem 0 2rem;
+    padding: var(--padding-hero);
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-hero-h1);
   }
 
   .hero h2 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-hero-h2);
   }
 
-  /* Footer-spezifische Stile */
+  /* Footer-specific styles */
   .footer-bottom {
     flex-direction: column;
     text-align: center;
@@ -82,7 +98,7 @@
   }
 
   section h2 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-section-h2);
     margin-bottom: 2rem;
   }
 
@@ -109,7 +125,7 @@
   }
 
   .contact-info {
-    padding: 2rem;
+    padding: var(--padding-contact-info);
   }
 }
 
@@ -127,11 +143,11 @@
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-hero-h1);
   }
 
   .hero h2 {
-    font-size: 0.9rem;
+    font-size: var(--font-size-hero-h2);
   }
 
   .hero p {
@@ -169,19 +185,19 @@
   }
 
   .contact-info h3 {
-    font-size: 1.3rem;
+    font-size: var(--font-size-contact-info-h3);
   }
 
   .contact-info p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-contact-info-p);
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.9rem;
+    font-size: var(--font-size-contact-form);
   }
 
   .social-icons a {
-    font-size: 1.3rem;
+    font-size: var(--font-size-social-icons);
   }
 }
