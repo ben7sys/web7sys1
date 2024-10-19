@@ -67,6 +67,17 @@
   .grid-cols-4 {
     grid-template-columns: 1fr;
   }
+
+  /* Footer-spezifische Stile */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .legal-links {
+    margin-top: 1rem;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
