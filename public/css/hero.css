@@ -9,6 +9,7 @@
   justify-content: center;
   text-align: center;
   color: var(--color-header);
+  margin-bottom: 3rem;
 }
 
 .hero-content {
