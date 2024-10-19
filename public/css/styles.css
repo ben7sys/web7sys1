@@ -1,32 +1,67 @@
+/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
+/* CSS Variables */
 :root {
-  --text-color: #a3a3a3;
-  --header-color: #ffffff;
-  /*--background-color: #181818;*/
-  --background-color: #111111;
-  --highlight-color: #306dcb;
-  --tag-background: #333333;
-  --tag-color: #fff;
+  --font-primary: "Montserrat", sans-serif;
+  --color-text: #a3a3a3;
+  --color-text-light: #d0d0d0;
+  --color-header: #ffffff;
+  --color-background: #111111;
+  --color-background-light: #1a1a1a;
+  --color-background-lighter: #252525;
+  --color-highlight: #306dcb;
+  --color-highlight-hover: #2555a0;
+  --color-tag: #333333;
 }
 
+/* Reset and Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-header);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
 header {
-  background: var(--background-color);
-  padding: 0.5rem 0; /* Reduziertes Padding */
+  background: var(--color-background);
+  padding: 0.5rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,20 +70,10 @@ header {
   transition: background-color 0.3s ease;
 }
 
-/* Fügen Sie einen Platzhalter hinzu, um den Inhalt unter dem fixierten Header zu verschieben */
-body::before {
-  content: '';
-  display: block;
-  height: 50px; /* Reduzierte Höhe, angepasst an die neue Header-Höhe */
-}
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem; /* Reduziertes Padding */
 }
 
 .logo {
@@ -58,14 +83,14 @@ nav {
 }
 
 .logo-main {
-  font-size: 1.5rem; /* Kleinere Schriftgröße */
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--highlight-color);
+  color: var(--color-highlight);
 }
 
 .logo-sub {
-  font-size: 0.7rem; /* Kleinere Schriftgröße */
-  color: var(--text-color);
+  font-size: 0.7rem;
+  color: var(--color-text);
 }
 
 .nav-links {
@@ -75,31 +100,13 @@ nav {
 }
 
 .nav-links li:not(:last-child) {
-  margin-right: 1rem; /* Reduzierter Abstand zwischen Menüpunkten */
+  margin-right: 1rem;
 }
 
 .nav-links a {
-  color: #d0d0d0;
-  text-decoration: none;
+  color: var(--color-text-light);
   font-weight: 500;
-  font-size: 0.9rem; /* Kleinere Schriftgröße */
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--highlight-color);
-}
-
-.nav-links .cta-button {
-  background-color: var(--highlight-color);
-  color: var(--header-color);
-  padding: 0.3rem 0.8rem; /* Kleinerer Button */
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.nav-links .cta-button:hover {
-  background-color: #2555a0;
+  font-size: 0.9rem;
 }
 
 .menu-toggle {
@@ -108,349 +115,17 @@ nav {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    padding: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
-
-  .social-icons {
-    display: none;
-  }
-}
-
-.logo a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.logo-img {
-  height: 40px;
-  margin-right: 1rem;
-}
-
-.logo-text {
-  font-size: 0.9rem; /* Reduzierte Schriftgröße */
-  font-weight: 500;
-  line-height: 1.2; /* Verbesserte Zeilenhöhe für mehrzeiligen Text */
-}
-
-/* Responsive Anpassung */
-@media screen and (max-width: 768px) {
-  .logo-text {
-    font-size: 0.8rem; /* Noch kleinere Schriftgröße auf mobilen Geräten */
-  }
-}
-
-.social-icons {
-  list-style: none;
-  display: flex;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 0.2rem;
-}
-
-.social-icons li {
-  margin: 0 0.5rem 0 0.5rem;
-}
-
-.social-icons a {
-  color: var(--text-color);
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.social-icons i:hover {
-  color: var(--highlight-color);
-  transform: rotate(-15deg);
-}
-
-main {
-  max-width: 1200px;
-  margin: 4rem auto 2rem;
-  padding: 0 2rem;
-}
-
-section {
-  margin-bottom: 4rem;
-}
-
-section h2 {
-  color: var(--header-color);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  border-bottom: none;
-}
-
-/* Intro Sektion */
-.intro {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.intro h1 {
-  color: var(--header-color);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.intro-text {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-/* Single Page Sektion */
-.singlepage {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.singlepage h1 {
-  color: var(--header-color);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.singlepage-text {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-
-/* Expertise Sektion */
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.expertise-item {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.expertise-item:hover {
-  transform: translateY(-5px);
-}
-
-.expertise-item i {
-  font-size: 3rem;
-  color: var(--highlight-color);
-  margin-bottom: 1rem;
-}
-
-.expertise-item h3 {
-  color: var(--header-color);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.expertise-item p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* Projekte Sektion */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-/* Responsive Design Anpassungen */
-@media screen and (max-width: 768px) {
-  main {
-    padding: 0 1rem;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-  }
-
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  .expertise-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.intro {
-  text-align: left;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--tag-background);
-  padding-bottom: 1rem;
-}
-
-.intro h1,
-.intro a {
-  color: var(--header-color);
-  font-size: 2.5rem;
-  text-decoration: none;
-}
-
-.intro a:hover {
-  text-shadow: 1px 1px 5px #ccc;
-}
-
-.intro-text,
-.project-text {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--header-color);
-  margin: 0;
-  padding: 0;
-}
-
-.intro-text2,
-.project-text2 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-}
-.project-text2 {
-  text-align: justify;
-}
-/* project text */
-.projecttext {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.projects a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.project {
-  background: #1a1a1a;
-  padding: 1.3rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, transform 0.3s;
-}
-
-.project:hover {
-  border: 2px solid #333;
-  transform: translateY(-5px) scale(1.005);
-}
-
-.project h2 {
-  margin-bottom: 0.5rem;
-  color: var(--header-color);
-  font-size: 1.2rem;
-}
-
-.project p {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--tag-background);
-  padding-bottom: 1rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background: var(--tag-background);
-  color: var(--tag-color);
-  padding: 0.3rem 0.6rem;
-  border-radius: 9px;
-  margin-right: 0.5rem;
-  margin-bottom: 0.2rem;
-  font-size: 0.8rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: var(--background-color);
-  color: var(--text-color);
-  margin-top: 2rem;
-  font-weight: 100;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer p {
-  margin-bottom: 1rem;
-}
-
-footer .social-icons {
-  margin-top: 0.5rem;
-}
-
-footer a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--highlight-color);
-}
-
-footer .heart {
-  color: var(--text-color);
-}
-
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-
-/* Fügen Sie diese Stile nach dem Header-Bereich ein */
-
+/* Hero Section */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('path/to/your/hero-image.jpg');
   background-size: cover;
   background-position: center;
-  padding: 4rem 0; /* Reduzierte Höhe */
+  padding: 4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--header-color);
+  color: var(--color-header);
 }
 
 .hero-content {
@@ -459,479 +134,163 @@ footer .heart {
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Etwas kleinere Schriftgröße */
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: var(--highlight-color);
+  color: var(--color-highlight);
 }
 
 .hero h2 {
-  font-size: 1.2rem; /* Kleinere Schriftgröße */
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
 .hero p {
-  font-size: 1rem; /* Kleinere Schriftgröße */
+  font-size: 1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.4;
 }
 
-.cta-button {
+/* Buttons */
+.btn {
   display: inline-block;
-  background-color: var(--highlight-color);
-  color: var(--header-color);
-  padding: 0.75rem 1.5rem; /* Etwas kleinerer Button */
+  background-color: var(--color-highlight);
+  color: var(--color-header);
+  padding: 0.75rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.cta-button:hover {
-  background-color: #2555a0;
+.btn:hover {
+  background-color: var(--color-highlight-hover);
   transform: translateY(-3px);
 }
 
-/* Passen Sie den main-Bereich an, um Abstand zur Hero-Section zu haben */
-main {
-  max-width: 1000px;
-  margin: 2rem auto; /* Reduzierter oberer Abstand */
-  padding: 0 1rem;
+.cta-button {
+  composes: btn;
 }
 
-/* Responsive Design für kleinere Bildschirme */
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* Allgemeine Abschnitts-Stile */
+/* Sections */
 section {
   margin-bottom: 4rem;
 }
 
 section h2 {
-  color: var(--header-color);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--highlight-color);
-  padding-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Linkliste Styles */
-.linkliste ul {
-  list-style-type: none;
+/* Grid Layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
 }
 
-.linkliste li {
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Cards */
+.card {
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: var(--color-highlight);
   margin-bottom: 1rem;
 }
 
-.linkliste a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.linkliste a:hover {
-  color: var(--highlight-color);
-}
-
-/* Wiki Styles */
-.wiki p {
-  margin-bottom: 1rem;
-}
-
-/* Downloads Styles */
-.downloads ul {
-  list-style-type: none;
-}
-
-.downloads li {
-  margin-bottom: 1rem;
-}
-
-.downloads a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.downloads a:hover {
-  color: var(--highlight-color);
-}
-
-/* Kontakt Formular Styles */
-.contact form {
+/* Forms */
+form {
   display: flex;
   flex-direction: column;
 }
 
-.contact input,
-.contact textarea {
+input,
+textarea {
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border: 1px solid var(--tag-background);
-  background-color: var(--background-color);
-  color: var(--text-color);
+  border: 1px solid var(--color-tag);
+  background-color: var(--color-background);
+  color: var(--color-text);
   border-radius: 5px;
 }
 
-.contact textarea {
+textarea {
   min-height: 150px;
 }
 
-.contact button {
-  background-color: var(--highlight-color);
-  color: var(--header-color);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact button:hover {
-  background-color: #2555a0;
-}
-
-/* Responsive Design Anpassungen */
-@media screen and (max-width: 768px) {
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact input,
-  .contact textarea,
-  .contact button {
-    width: 100%;
-  }
-}
-
-/* Optional: Fügen Sie einen Schatten hinzu, wenn der Benutzer scrollt */
-header.scrolled {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Leistungen Sektion */
-.leistungen {
-  margin-bottom: 4rem;
-}
-
-.leistungen h2 {
-  color: var(--header-color);
-  font-size: 2rem;
-  margin-bottom: 2rem;
+/* Footer */
+footer {
   text-align: center;
+  padding: 1rem 0;
+  background: var(--color-background);
+  margin-top: 2rem;
 }
 
-.leistungen-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.leistung-item {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.social-icons {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  justify-content: center;
+  background-color: var(--color-background-light);
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin: 1rem 0;
 }
 
-.leistung-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.social-icons li {
+  margin: 0 0.5rem;
 }
 
-.leistung-item i {
-  font-size: 2.5rem;
-  color: var(--highlight-color);
-  margin-bottom: 1rem;
-}
-
-.leistung-item h3 {
-  color: var(--header-color);
+.social-icons a {
+  color: var(--color-text);
   font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
-.leistung-item p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  flex-grow: 1;
+.social-icons i:hover {
+  color: var(--color-highlight);
+  transform: rotate(-15deg);
 }
 
-/* Responsive Design Anpassungen */
-@media screen and (max-width: 768px) {
-  .leistungen h2 {
-    font-size: 1.8rem;
-  }
-
-  .leistungen-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Untersektion für Beratungsleistungen */
-.sub-section {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #1e1e1e;
-  border-radius: 10px;
-}
-
-.sub-section-title {
-  color: var(--header-color);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.sub-section-description {
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.beratung-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.beratung-item {
-  background: #252525;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.beratung-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.beratung-item i {
-  font-size: 2rem;
-  color: var(--highlight-color);
-  margin-bottom: 0.5rem;
-}
-
-.beratung-item h4 {
-  color: var(--header-color);
-  font-size: 1rem;
-}
-
-/* Responsive Design Anpassungen */
-@media screen and (max-width: 768px) {
-  .sub-section-title {
-    font-size: 1.3rem;
-  }
-
-  .beratung-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .beratung-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Anpassungen für die Leistungen-Sektion */
-.leistungen-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.leistung-item {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Spezielle Stile für die "Weitere Beratungsleistungen" Karte */
-.weitere-beratung {
-  grid-column: 1 / -1; /* Nimmt die volle Breite ein */
-  background: #1e1e1e;
-  padding: 2rem;
-}
-
-.weitere-beratung h3 {
-  color: var(--header-color);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.weitere-beratung p {
-  color: var(--text-color);
-  margin-bottom: 2rem;
-}
-
-.beratung-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.beratung-item {
-  background: #252525;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.beratung-item:hover {
-  transform: translateY(-3px);
-}
-
-.beratung-item i {
-  font-size: 1.5rem;
-  color: var(--highlight-color);
-  margin-bottom: 0.5rem;
-}
-
-.beratung-item h4 {
-  color: var(--header-color);
-  font-size: 0.9rem;
-}
-
-/* Responsive Anpassungen */
-@media screen and (max-width: 768px) {
-  .beratung-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .beratung-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Gemeinsame Stile für alle Sektionen */
-.expertise, .leistungen, .weitere-leistungen, .beratungsleistungen {
-  margin-bottom: 4rem;
-}
-
-.expertise h2, .leistungen h2, .weitere-leistungen h2, .beratungsleistungen h2 {
-  color: var(--header-color);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-/* Grids für verschiedene Sektionen */
-.expertise-grid, .leistungen-grid, .beratung-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.expertise-grid, .leistungen-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.beratung-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Gemeinsame Stile für Items */
-.expertise-item, .leistung-item, .beratung-item {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.expertise-item:hover, .leistung-item:hover, .beratung-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Icons */
-.expertise-item i, .leistung-item i, .beratung-item i {
-  font-size: 2.5rem;
-  color: var(--highlight-color);
-  margin-bottom: 1rem;
-}
-
-/* Überschriften */
-.expertise-item h3, .leistung-item h3, .beratung-item h4 {
-  color: var(--header-color);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* Beschreibungen */
-.expertise-item p, .leistung-item p, .beratung-item p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-color);
-}
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-  .expertise-grid, .leistungen-grid, .beratung-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Responsive Anpassungen */
 @media screen and (max-width: 1024px) {
-  .logo-main {
-    font-size: 1.3rem;
-  }
-
-  .logo-sub {
-    font-size: 0.6rem;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-  }
-
-  .nav-links .cta-button {
-    padding: 0.2rem 0.6rem;
-  }
-
-  main {
+  .container {
     padding: 0 1.5rem;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero h2 {
-    font-size: 1.1rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.3rem; }
 }
 
 @media screen and (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
   header {
     padding: 0.3rem 0;
   }
@@ -947,8 +306,6 @@ header.scrolled {
 
   .menu-toggle {
     display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
     align-self: flex-end;
     margin-top: -2rem;
   }
@@ -957,7 +314,7 @@ header.scrolled {
     display: none;
     width: 100%;
     flex-direction: column;
-    background-color: var(--background-color);
+    background-color: var(--color-background);
     padding: 1rem;
   }
 
@@ -969,10 +326,6 @@ header.scrolled {
     margin: 0.5rem 0;
   }
 
-  .nav-links .cta-button {
-    margin-top: 0.5rem;
-  }
-
   .hero {
     padding: 3rem 0;
   }
@@ -982,24 +335,6 @@ header.scrolled {
   }
 
   .hero h2 {
-    font-size: 1rem;
-  }
-
-  .expertise-grid,
-  .leistungen-grid,
-  .beratung-grid {
-    grid-template-columns: 1fr;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .intro h1 {
-    font-size: 1.8rem;
-  }
-
-  .intro-text {
     font-size: 1rem;
   }
 }
@@ -1025,36 +360,26 @@ header.scrolled {
     font-size: 0.8rem;
   }
 
-  .cta-button {
+  .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
 
-  section h2 {
-    font-size: 1.3rem;
-  }
-
-  .expertise-item,
-  .leistung-item,
-  .beratung-item {
+  .card {
     padding: 1.5rem;
   }
 
-  .expertise-item i,
-  .leistung-item i,
-  .beratung-item i {
+  .card i {
     font-size: 2rem;
   }
+}
 
-  .expertise-item h3,
-  .leistung-item h3,
-  .beratung-item h4 {
-    font-size: 1rem;
-  }
-
-  .expertise-item p,
-  .leistung-item p,
-  .beratung-item p {
-    font-size: 0.8rem;
-  }
+/* Lazy Loading */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
 }

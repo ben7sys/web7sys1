@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IT-Experte Benjamin Bader, Netzwerksicherheit, Datensicherheit,Prozessautomatisierung">
-  <title>Meine Webseite</title>
+  <meta name="description" content="IT-Experte Benjamin Bader, Netzwerksicherheit, Datensicherheit, Prozessautomatisierung">
+  <title>7SYS - Automated Systems</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <nav>
+    <nav class="container">
       <div class="logo">
         <span class="logo-main">7SYS</span>
         <span class="logo-sub">automated systems to improve the world and beyond</span>
@@ -26,7 +25,7 @@
         <li><a href="#linkliste">Linkliste</a></li>
         <li><a href="#wiki">Wiki</a></li>
         <li><a href="#downloads">Downloads</a></li>
-        <li><a href="#contact" class="cta-button">Kontakt</a></li>
+        <li><a href="#contact" class="btn">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -37,35 +36,38 @@
       <h1>SEVEN SYSTEMS</h1>
       <h2>automated systems to improve the world and beyond</h2>
       <p>Automatische Systeme für eine nachhaltige und liebevolle Zukunft.</p>
-      <a href="#contact" class="cta-button">Abonnieren</a>
+      <a href="#contact" class="btn">Abonnieren</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <main>
-    <section class="intro">
-      <h1>Vision</h1>
-      <p class="intro-text">Kreieren automatisierter Systeme, die eine nachhaltige und liebevolle Zukunft für unsere Welt schaffen für heutige und zukünftige Generationen, auf der Erde und darüber hinaus...</p>
-
-        <h1>Mission</h1>
-        <p class="intro-text">Durch fortschrittliche Automatisierungslösungen eine Welt fördern, in der Effizienz und Technologie im Einklang mit Natur und Mensch stehen. Unser Ziel ist es, durch Innovationen eine nachhaltige und fürsorgliche Gesellschaft zu unterstützen, die den Bedürfnissen von Menschen und unserem Planeten gerecht wird – auf der Erde und auf anderen Welten.</p>
-      </section>
+  <main class="container">
+    <!-- Vision and Mission Section -->
+    <section id="vision-mission" class="grid grid-2">
+      <div class="card">
+        <h2>Vision</h2>
+        <p>Kreieren automatisierter Systeme, die eine nachhaltige und liebevolle Zukunft für unsere Welt schaffen für heutige und zukünftige Generationen, auf der Erde und darüber hinaus...</p>
+      </div>
+      <div class="card">
+        <h2>Mission</h2>
+        <p>Durch fortschrittliche Automatisierungslösungen eine Welt fördern, in der Effizienz und Technologie im Einklang mit Natur und Mensch stehen. Unser Ziel ist es, durch Innovationen eine nachhaltige und fürsorgliche Gesellschaft zu unterstützen, die den Bedürfnissen von Menschen und unserem Planeten gerecht wird – auf der Erde und auf anderen Welten.</p>
+      </div>
+    </section>
 
     <!-- Kernkompetenzen -->
-    <section id="expertise" class="expertise">
+    <section id="expertise" class="mb-2">
       <h2>Kernkompetenzen</h2>
-      <div class="expertise-grid">
-        <div class="expertise-item">
+      <div class="grid grid-3">
+        <div class="card">
           <i class="fas fa-clipboard-check"></i>
           <h3>Compliance-Lösungen</h3>
           <p>Unterstützung bei der Einhaltung von Datenschutzbestimmungen wie DSGVO und NIS-2.</p>
         </div>
-        <div class="expertise-item">
+        <div class="card">
           <i class="fas fa-shield-alt"></i>
           <h3>Netzwerksicherheit</h3>
           <p>Umfassende Sicherheitslösungen zum Schutz Ihrer Unternehmensnetzwerke.</p>
         </div>
-        <div class="expertise-item">
+        <div class="card">
           <i class="fas fa-lock"></i>
           <h3>Datensicherheit</h3>
           <p>Schutz Ihrer sensiblen Unternehmensdaten vor unbefugtem Zugriff und Verlust.</p>
@@ -74,20 +76,20 @@
     </section>
 
     <!-- Hauptleistungen -->
-    <section id="leistungen" class="leistungen">
+    <section id="leistungen" class="mb-2">
       <h2>Leistungen</h2>
-      <div class="leistungen-grid">
-        <div class="leistung-item">
+      <div class="grid grid-3">
+        <div class="card">
           <i class="fas fa-shield-alt"></i>
           <h3>Firewall</h3>
           <p>Fortschrittlicher Netzwerkschutz mit Next-Generation Firewall-Technologie.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-laptop-house"></i>
           <h3>Remote Zugriff</h3>
           <p>Sichere Lösungen für Fernzugriff auf Unternehmensnetzwerke und -ressourcen.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-cloud-upload-alt"></i>
           <h3>Backup</h3>
           <p>Zuverlässige Datensicherung und Wiederherstellungslösungen für Ihr Unternehmen.</p>
@@ -96,35 +98,35 @@
     </section>
 
     <!-- Weitere Leistungen -->
-    <section id="weitere-leistungen" class="weitere-leistungen">
+    <section id="weitere-leistungen" class="mb-2">
       <h2>Weitere Leistungen</h2>
-      <div class="leistungen-grid">
-        <div class="leistung-item">
+      <div class="grid grid-3">
+        <div class="card">
           <i class="fas fa-mobile-alt"></i>
           <h3>Mobile Security</h3>
           <p>Schutz mobiler Geräte durch Mobile Device Management (MDM).</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-virus-slash"></i>
           <h3>Antivirus-Lösungen</h3>
           <p>Umfassender Schutz vor Malware und Ransomware mit zentralem Management.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-envelope-open-text"></i>
           <h3>E-Mail-Archivierung</h3>
           <p>Revisionssichere E-Mail-Archivierung zur Einhaltung rechtlicher Anforderungen.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-laptop-code"></i>
           <h3>Endpoint Security</h3>
           <p>Schutz von Endgeräten durch umfassende Sicherheitsfunktionen.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-user-shield"></i>
           <h3>Security Awareness Training</h3>
           <p>Schulungen zur Stärkung des Cybersecurity-Bewusstseins.</p>
         </div>
-        <div class="leistung-item">
+        <div class="card">
           <i class="fas fa-door-open"></i>
           <h3>NAC (Network Access Control)</h3>
           <p>Kontrolle des Netzwerkzugriffs durch Identifizierung und Überprüfung aller Geräte.</p>
@@ -133,37 +135,37 @@
     </section>
 
     <!-- Beratungsleistungen -->
-    <section id="beratungsleistungen" class="beratungsleistungen">
+    <section id="beratungsleistungen" class="mb-2">
       <h2>Beratungsleistungen</h2>
-      <div class="beratung-grid">
-        <div class="beratung-item">
+      <div class="grid grid-3">
+        <div class="card">
           <i class="fas fa-server"></i>
-          <h4>IT-Infrastruktur</h4>
+          <h3>IT-Infrastruktur</h3>
           <p>Strategische Beratung zur Optimierung Ihrer IT-Infrastruktur.</p>
         </div>
-        <div class="beratung-item">
+        <div class="card">
           <i class="fas fa-cloud"></i>
-          <h4>Cloud-Lösungen</h4>
+          <h3>Cloud-Lösungen</h3>
           <p>Beratung zu effizienten und sicheren Cloud-Implementierungen.</p>
         </div>
-        <div class="beratung-item">
+        <div class="card">
           <i class="fas fa-database"></i>
-          <h4>Backup-Strategien</h4>
+          <h3>Backup-Strategien</h3>
           <p>Entwicklung maßgeschneiderter Backup- und Disaster-Recovery-Pläne.</p>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="mb-2">
       <h2>Aktuelle Projekte</h2>
-      <div class="projects-grid">
+      <div class="grid grid-2">
         <!-- Fügen Sie hier Ihre Projekte ein -->
       </div>
     </section>
 
     <!-- Link List Section -->
-    <section id="linkliste" class="linkliste">
+    <section id="linkliste" class="mb-2">
       <h2>Linkliste</h2>
       <ul>
         <li><a href="#">Nützlicher Link 1</a></li>
@@ -173,14 +175,14 @@
     </section>
 
     <!-- Wiki Section -->
-    <section id="wiki" class="wiki">
+    <section id="wiki" class="mb-2">
       <h2>Wiki</h2>
       <p>Hier finden Sie nützliche Informationen und Anleitungen zu verschiedenen IT-Themen.</p>
       <!-- Add more content or links to wiki articles -->
     </section>
 
     <!-- Downloads Section -->
-    <section id="downloads" class="downloads">
+    <section id="downloads" class="mb-2">
       <h2>Downloads</h2>
       <ul>
         <li><a href="#">Download 1</a></li>
@@ -190,26 +192,28 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact">
       <h2>Kontakt</h2>
       <form>
         <input type="text" name="name" placeholder="Ihr Name" required>
         <input type="email" name="email" placeholder="Ihre E-Mail" required>
         <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Nachricht senden</button>
+        <button type="submit" class="btn">Nachricht senden</button>
       </form>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>made with <span class="heart">❤️</span> by <a href="#">7sys</a></p>
-    <ul class="social-icons">
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-    </ul>
-    <p><a href="impressum.html">Impressum</a></p>
+    <div class="container">
+      <p>made with <span class="heart">❤️</span> by <a href="#">7sys</a></p>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-github"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+      <p><a href="impressum.html">Impressum</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
