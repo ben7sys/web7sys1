@@ -39,9 +39,13 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 7rem 0 3rem;
+    padding: 5rem 0 3rem;
     margin-top: 1rem;
     transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .hero-content {
+    margin-top: 0px;
   }
 
   .hero h1 {
@@ -62,6 +66,10 @@
     padding: 5rem 0 3rem;
     margin-top: 1rem;
     transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .hero-content {
+    margin-top: 0px;
   }
 
   .hero h1 {

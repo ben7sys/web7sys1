@@ -109,6 +109,15 @@ html {
   background: var(--color-highlight-hover);
 }
 
+/********** 768px **********/
+
+/* Disable custom scrollbar on mobile devices */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none; /* Versteckt die benutzerdefinierte Scrollbar auf mobilen Geräten */
+  }
+}
+
 /********** 1024px **********/
 
 @media screen and (max-width: 1024px) {

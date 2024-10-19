@@ -30,6 +30,9 @@ header:hover {
   width: 100%;
   margin: 0 auto;
   padding: 0rem 2.9rem;
+  max-height: 70px;
+  height: 70px;
+  overflow: hidden;
 }
 
 .logo {
@@ -44,15 +47,15 @@ header:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   color: transparent;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 200% auto;
   transition: all .3s ease-in-out;
   animation: shinyEffect 9s infinite linear;
-  padding: 1.1em;
+  padding: 1.0em;
 }
 
 @keyframes shinyEffect {
@@ -92,9 +95,11 @@ header:hover {
   cursor: pointer;
   color: var(--color-text-light);
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 25px;
+  right: 25px;
 }
+
+/********** 768px **********/
 
 @media (max-width: 768px) {
   header {
@@ -102,9 +107,14 @@ header:hover {
     align-items: center;
   }
 
+  .head-container {
+    overflow:visible;
+  }
+
   .menu-toggle {
     display: block;
-    gap: 10px;
+    top: 25px;
+    right: 25px;
   }
 
   .logo {
@@ -119,13 +129,27 @@ header:hover {
   }
 
   .nav-menu {
+    display: none; /* Menü standardmäßig ausgeblendet */
     flex-direction: column;
-    display: none;
     align-items: center;
+    gap: 10px;
+    background: rgba(41, 41, 41, 0.95); /* Hintergrund für das aufgeklappte Menü */
+    padding: 20px;
+    position: absolute;
+    top: 100%; /* Unterhalb des Headers platzieren */
+    right: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .nav-menu.active {
-    padding-top: 1.5em !important;
     display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px; /* Abstände für Links hinzufügen */
+    width: 100%;
+    text-align: center; /* Text zentrieren */
   }
 }
