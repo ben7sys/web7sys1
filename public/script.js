@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navMenu = document.querySelector('.nav-menu');
   const header = document.querySelector('.main-header');
   const backToTopButton = document.createElement('button');
   backToTopButton.textContent = '↑';
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Mobile menu toggle
   menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
+    navMenu.classList.toggle('active');
   });
 
   // Close menu when a link is clicked

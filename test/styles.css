@@ -1,0 +1,111 @@
+/* styles.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(350deg, rgba(14, 14, 14, 0.9), rgba(41, 41, 41, 0.9));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease;
+  }
+  
+  header:hover {
+    background: linear-gradient(365deg, rgba(14, 14, 14, 1), rgba(51, 51, 51, 1));
+    transform: translateY(0px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo-sub {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    transition: all .3s ease-in-out;
+    animation: shinyEffect 9s infinite linear;
+    padding: 1.1em;
+  }
+  
+  @keyframes shinyEffect {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: var(--color-highlight);
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-light);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .logo {
+      display: block;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      display: none;
+      align-items: center;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  }
+  
