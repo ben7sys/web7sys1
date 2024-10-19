@@ -5,10 +5,10 @@
   --font-size-h3: 1.3rem;
   --padding-container: 0 1.5rem;
   --padding-hero: 4rem 0 2rem;
+  --padding-contact-info: 2rem;
   --font-size-hero-h1: 1.8rem;
   --font-size-hero-h2: 0.9rem;
   --font-size-section-h2: 1.6rem;
-  --padding-contact-info: 2rem;
   --font-size-contact-info-h3: 1.3rem;
   --font-size-contact-info-p: 0.9rem;
   --font-size-contact-form: 0.9rem;
@@ -59,10 +59,14 @@
     flex-direction: column;
     background-color: var(--color-background);
     padding: 1rem;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
   }
 
   .nav-links.active {
     display: flex;
+    max-height: 500px; /* Adjust as needed */
   }
 
   .nav-links li {
@@ -70,7 +74,7 @@
   }
 
   .hero {
-    padding: var(--padding-hero);
+    padding: 5rem 0 3rem; /* Adjusted padding */
   }
 
   .hero h1 {
@@ -127,6 +131,10 @@
   .contact-info {
     padding: var(--padding-contact-info);
   }
+
+  #home {
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -139,7 +147,7 @@
   }
 
   .hero {
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 3rem; /* Adjusted padding */
   }
 
   .hero h1 {
@@ -199,5 +207,9 @@
 
   .social-icons a {
     font-size: var(--font-size-social-icons);
+  }
+
+  #home {
+    margin-top: 20px;
   }
 }
