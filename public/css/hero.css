@@ -3,7 +3,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('path/to/your/hero-image.jpg');
   background-size: cover;
   background-position: center;
-  padding: 3rem 0 3rem;
+  padding: 3rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
 .hero-content {
   max-width: 800px;
   padding: 0 1rem;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .hero h1 {
@@ -45,7 +45,7 @@
   }
 
   .hero-content {
-    margin-top: 0px;
+    margin-top: 5px;
   }
 
   .hero h1 {
@@ -62,26 +62,6 @@
 /********** 480px **********/
 
 @media screen and (max-width: 480px) {
-  .hero {
-    padding: 5rem 0 3rem;
-    margin-top: 1rem;
-    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out;
-  }
-
-  .hero-content {
-    margin-top: 0px;
-  }
-
-  .hero h1 {
-    font-size: var(--font-size-hero-h1);
-    transition: font-size 0.3s ease-in-out;
-  }
-
-  .hero h2 {
-    font-size: var(--font-size-hero-h2);
-    transition: font-size 0.3s ease-in-out;
-  }
-
   .hero p {
     font-size: 0.8rem;
     transition: font-size 0.3s ease-in-out;

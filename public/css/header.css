@@ -22,10 +22,9 @@ header:hover {
 
 .head-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -43,7 +42,6 @@ header:hover {
 }
 
 .logo-sub {
-  display: inline-block;
   display: flex;
   align-items: center;
   text-align: center;
@@ -64,7 +62,6 @@ header:hover {
 }
 
 .nav-menu {
-  display: inline-block;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -108,7 +105,7 @@ header:hover {
   }
 
   .head-container {
-    overflow:visible;
+    overflow: visible;
   }
 
   .menu-toggle {
@@ -145,7 +142,6 @@ header:hover {
 
   .nav-menu.active {
     display: flex;
-    
   }
 
   .nav-menu a {
