@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background: linear-gradient(350deg, rgba(14, 14, 14, 0.9), rgba(41, 41, 41, 0.9));
@@ -11,6 +11,7 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease;
+  max-height: 100px;
 }
 
 header:hover {
@@ -19,13 +20,27 @@ header:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+.head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0rem 2.9rem;
+}
+
 .logo {
+  display: inline-block;
   font-size: 2.2rem;
   font-weight: bold;
   color: #306CCA;
 }
 
 .logo-sub {
+  display: inline-block;
   display: flex;
   align-items: center;
   text-align: center;
@@ -46,6 +61,7 @@ header:hover {
 }
 
 .nav-menu {
+  display: inline-block;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -54,6 +70,7 @@ header:hover {
 
 .nav-menu li {
   margin: 0;
+  list-style: none;
 }
 
 .nav-menu a {
