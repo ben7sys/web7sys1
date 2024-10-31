@@ -5,12 +5,61 @@
   background-color: var(--color-background-light);
   margin: -2rem 0 3rem 0;
   border-bottom: 1px solid var(--color-highlight);
+  position: relative;
+  overflow: hidden;
 }
 
 .mission-container {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
+  overflow: hidden;
+}
+
+/* Enhanced Quantum Field Effect */
+.ms-1::before {
+  content: '';
+  position: absolute;
+  inset: -50px;
+  background: 
+    radial-gradient(circle at 20% 20%, var(--color-highlight) 2px, transparent 3px),
+    radial-gradient(circle at 80% 80%, var(--color-primary) 2px, transparent 3px);
+  background-size: 30px 30px;
+  opacity: 0.08;
+  animation: quantumField 15s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(1px);
+  transition: all 0.5s ease-in-out;
+}
+
+.ms-1::after {
+  content: '';
+  position: absolute;
+  inset: -50px;
+  background: 
+    radial-gradient(circle at 50% 50%, var(--color-text) 2px, transparent 3px);
+  background-size: 40px 40px;
+  opacity: 0.05;
+  animation: quantumField 20s ease-in-out infinite reverse;
+  pointer-events: none;
+  filter: blur(0.5px);
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes quantumField {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.05;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.08;
+  }
+  100% { 
+    transform: rotate(360deg) scale(1);
+    opacity: 0.05;
+  }
 }
 
 .logo-sub {
@@ -20,26 +69,38 @@
     font-family: var(--font-primary);
     font-variant: small-caps;
     font-weight: 800;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     color: transparent;
     background: linear-gradient(90deg, 
-        rgba(70, 73, 255, 0.8) 0%,
-        rgba(70, 73, 255, 0.8) 33%,
-        rgb(255, 255, 255) 50%,
-        rgba(63, 201, 255, 0.8) 66%,
-        rgba(63, 201, 255, 0.8) 100%
+        rgba(70, 73, 255, 0.9) 0%,
+        rgba(70, 73, 255, 0.9) 33%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(63, 76, 255, 0.9) 66%,
+        rgba(63, 82, 255, 0.9) 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 200% 100%;
-    transition: all .3s ease-in-out;
-    animation: shinyEffect 6s infinite linear;
+    transition: all 0.5s ease-in-out;
+    animation: shinyEffect 6s infinite ease-in-out;
     padding: 1.0em;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 @keyframes shinyEffect {
-    0% { background-position: 0 0; }
-    100% { background-position: 200% 0; }
+    0% { 
+        background-position: 0 0;
+        opacity: 0.95;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% { 
+        background-position: 200% 0;
+        opacity: 0.95;
+    }
 }
 
 @media screen and (max-width: 768px) {
