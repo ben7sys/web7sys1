@@ -5,6 +5,9 @@
 @import 'base.css';
 @import 'layout.css';
 @import 'components.css';
+@import 'buttons.css';
+@import 'cards.css';
+@import 'forms.css';
 @import 'header.css';
 @import 'hero.css';
 @import 'sections.css';

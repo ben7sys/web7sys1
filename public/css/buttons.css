@@ -1,0 +1,60 @@
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--color-highlight);
+  color: var(--color-header);
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn:hover {
+  background-color: var(--color-highlight-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-background-lighter);
+  color: var(--color-text-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-background-light);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--color-highlight);
+  border: 2px solid var(--color-highlight);
+}
+
+.btn-tertiary:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-header);
+}
+
+.cta-button {
+  padding: 0.6rem 1.3rem;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 490px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  }
+}
