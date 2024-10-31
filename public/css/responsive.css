@@ -50,10 +50,15 @@
   }
 
   .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-light);
     display: block;
-    align-self: flex-end;
-    margin-top: -2rem;
-    transition: margin 0.3s ease-in-out;
+    top: 25px;
+    right: 25px;
+    position: absolute;
   }
 
   .nav-links {
@@ -80,7 +85,7 @@
   }
 
   .hero {
-    padding: 5rem 0 3rem;
+    padding: 7rem 0 3rem;
     transition: padding 0.3s ease-in-out;
   }
 
