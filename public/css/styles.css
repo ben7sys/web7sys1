@@ -13,3 +13,12 @@
 @import 'sections.css';
 @import 'footer.css';
 @import 'responsive.css';
+
+/* Sections CSS - Split into modular components */
+@import 'base-sections.css';
+@import 'mission-section.css';
+@import 'projects-section.css';
+@import 'links-section.css';
+@import 'wiki-section.css';
+@import 'downloads-section.css';
+@import 'contact-section.css';
