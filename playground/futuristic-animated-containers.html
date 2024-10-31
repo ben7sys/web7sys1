@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/inter/3.19.3/inter.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0a0a0a;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+    }
+
+    .container {
+      position: relative;
+      padding: 2rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      overflow: hidden;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Container 1: Pulsierende Kanten */
+    .container:nth-child(1) {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: pulseBorder 3s infinite;
+    }
+    .container:nth-child(1)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      animation: rotatingBorder 6s linear infinite;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    }
+    @keyframes pulseBorder {
+      50% { border-color: rgba(255, 255, 255, 0.3); }
+    }
+    @keyframes rotatingBorder {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Container 2: Floating Particles */
+    .container:nth-child(2) {
+      background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(30,30,30,0.3));
+    }
+    .container:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, 
+        rgba(255,255,255,0.1) 0%, 
+        transparent 10%);
+      animation: floatingParticles 4s ease-in-out infinite;
+    }
+    @keyframes floatingParticles {
+      0%, 100% { transform: translateY(-10px); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* Container 3: Glowing Corners */
+    .container:nth-child(3) {
+      box-shadow: inset 0 0 15px rgba(255,255,255,0.1);
+    }
+    .container:nth-child(3)::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 90deg, 
+        rgba(255,255,255,0.2) 180deg,
+        transparent 270deg
+      );
+      animation: rotateConic 4s linear infinite;
+    }
+    @keyframes rotateConic {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Container 4: Data Stream */
+    .container:nth-child(4) {
+      background: linear-gradient(0deg, 
+        rgba(0,0,0,0.5), 
+        rgba(30,30,30,0.5)
+      );
+    }
+    .container:nth-child(4)::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        rgba(255,255,255,0.1) 1px,
+        transparent 2px
+      );
+      animation: dataStream 8s linear infinite;
+    }
+    @keyframes dataStream {
+      0% { transform: translateY(-50%); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Container 5: Energy Pulse */
+    .container:nth-child(5) {
+      background: radial-gradient(circle at center,
+        rgba(40,40,40,0.3),
+        rgba(0,0,0,0.3)
+      );
+    }
+    .container:nth-child(5)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      background: radial-gradient(circle at center,
+        rgba(255,255,255,0.2),
+        transparent 70%
+      );
+      animation: energyPulse 3s ease-in-out infinite;
+    }
+    @keyframes energyPulse {
+      0%, 100% { opacity: 0.1; transform: scale(0.8); }
+      50% { opacity: 0.3; transform: scale(1.1); }
+    }
+
+    /* Container 6: Quantum Field */
+    .container:nth-child(6) {
+      background: linear-gradient(135deg,
+        rgba(20,20,20,0.3),
+        rgba(40,40,40,0.3)
+      );
+    }
+    .container:nth-child(6)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: quantumField 6s linear infinite;
+    }
+    @keyframes quantumField {
+      100% { transform: rotate(360deg) scale(1.1); }
+    }
+
+    /* Container 7: Neural Network */
+    .container:nth-child(7) {
+      background: linear-gradient(45deg,
+        rgba(30,30,30,0.3),
+        rgba(10,10,10,0.3)
+      );
+      backdrop-filter: blur(5px);
+    }
+    .container:nth-child(7)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.1) 95%),
+        linear-gradient(0deg, transparent 95%, rgba(255,255,255,0.1) 95%);
+      background-size: 20px 20px;
+      animation: neuralPulse 4s ease-in-out infinite;
+    }
+    @keyframes neuralPulse {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Container 8: Holographic Display */
+    .container:nth-child(8) {
+      background: linear-gradient(135deg,
+        rgba(0,0,0,0.4),
+        rgba(20,20,20,0.4)
+      );
+    }
+    .container:nth-child(8)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        rgba(255,255,255,0.1) 1px,
+        transparent 2px
+      );
+      animation: holoDisplay 3s linear infinite;
+    }
+    @keyframes holoDisplay {
+      0% { transform: translateX(-10px) skewX(2deg); }
+      100% { transform: translateX(10px) skewX(-2deg); }
+    }
+
+    /* Container 9: Energy Shield */
+    .container:nth-child(9) {
+      border: 1px solid rgba(255,255,255,0.1);
+      background: radial-gradient(
+        circle at center,
+        rgba(40,40,40,0.3),
+        rgba(0,0,0,0.3)
+      );
+    }
+    .container:nth-child(9)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent 50%
+      );
+      animation: shieldRotate 8s linear infinite;
+    }
+    @keyframes shieldRotate {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Container 10: Tech Grid */
+    .container:nth-child(10) {
+      background: linear-gradient(90deg,
+        rgba(20,20,20,0.3),
+        rgba(40,40,40,0.3)
+      );
+    }
+    .container:nth-child(10)::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.1) 95%),
+        linear-gradient(0deg, transparent 95%, rgba(255,255,255,0.1) 95%);
+      background-size: 15px 15px;
+      animation: techGridPulse 4s ease infinite;
+    }
+    @keyframes techGridPulse {
+      0%, 100% { opacity: 0.1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.05); }
+    }
+
+    /* Gemeinsame Textformatierung */
+    .container span {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      z-index: 1;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="container">
+      <span>PULSING BORDERS</span>
+    </div>
+    <div class="container">
+      <span>PARTICLE FIELD</span>
+    </div>
+    <div class="container">
+      <span>CORNER GLOW</span>
+    </div>
+    <div class="container">
+      <span>DATA STREAM</span>
+    </div>
+    <div class="container">
+      <span>ENERGY PULSE</span>
+    </div>
+    <div class="container">
+      <span>QUANTUM FIELD</span>
+    </div>
+    <div class="container">
+      <span>NEURAL NETWORK</span>
+    </div>
+    <div class="container">
+      <span>HOLOGRAPHIC</span>
+    </div>
+    <div class="container">
+      <span>ENERGY SHIELD</span>
+    </div>
+    <div class="container">
+      <span>TECH GRID</span>
+    </div>
+  </div>
+</body>
+</html>

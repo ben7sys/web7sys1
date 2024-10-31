@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sci-Fi Text Effects</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Text Effect 1: Glowing Effect */
+        .effect-glow {
+            font-size: 2rem;
+            color: #00e6e6;
+            text-shadow: 0 0 8px #00e6e6, 0 0 16px #00e6e6;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+        .effect-glow:hover {
+            text-shadow: 0 0 16px #00e6e6, 0 0 32px #00e6e6;
+        }
+
+        /* Text Effect 2: Neon Flicker */
+        .effect-neon {
+            font-size: 2rem;
+            color: #ff0080;
+            text-shadow: 0 0 8px #ff0080, 0 0 16px #ff0080;
+            animation: flicker 3s infinite alternate;
+        }
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 0 0 8px #ff0080, 0 0 16px #ff0080;
+            }
+            20%, 24%, 55% {
+                text-shadow: 0 0 4px #ff0080;
+            }
+        }
+
+        /* Text Effect 3: Pulse Effect */
+        .effect-pulse {
+            font-size: 2rem;
+            color: #39ff14;
+            text-shadow: 0 0 12px #39ff14;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 8px #39ff14;
+            }
+            50% {
+                text-shadow: 0 0 16px #39ff14;
+            }
+            100% {
+                text-shadow: 0 0 8px #39ff14;
+            }
+        }
+
+        /* Text Effect 4: Subtle Color Shift */
+        .effect-color-shift {
+            font-size: 2rem;
+            color: #ffffff;
+            background: linear-gradient(90deg, #ff0066, #00ccff, #39ff14);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorShift 5s infinite;
+        }
+        @keyframes colorShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="effect-glow">automated systems to improve the world and beyond</div>
+        <div class="effect-neon">automated systems to improve the world and beyond</div>
+        <div class="effect-pulse">automated systems to improve the world and beyond</div>
+        <div class="effect-color-shift">automated systems to improve the world and beyond</div>
+    </div>
+</body>
+</html>

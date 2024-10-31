@@ -14,12 +14,32 @@
 }
 
 .logo-sub {
-  font-size: 1.2rem;
-  color: var(--color-text-light);
-  font-weight: 300;
-  letter-spacing: 1px;
-  display: block;
-  line-height: 1.6;
+    display: block;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-variant: small-caps;
+    font-weight: 800;
+    font-size: 1.0rem;
+    color: transparent;
+    background: linear-gradient(90deg, 
+        rgba(70, 73, 255, 0.8) 0%,
+        rgba(70, 73, 255, 0.8) 33%,
+        rgb(255, 255, 255) 50%,
+        rgba(63, 201, 255, 0.8) 66%,
+        rgba(63, 201, 255, 0.8) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    transition: all .3s ease-in-out;
+    animation: shinyEffect 6s infinite linear;
+    padding: 1.0em;
+}
+
+@keyframes shinyEffect {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
 }
 
 @media screen and (max-width: 768px) {
