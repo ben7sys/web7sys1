@@ -1,0 +1,28 @@
+/* Link List Section */
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-background-light);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.link-card:hover {
+  background-color: var(--color-background);
+  transform: translateX(10px);
+}
+
+.link-card i {
+  color: var(--color-highlight);
+  margin-right: 1.25rem;
+  font-size: 1.75rem;
+  transition: transform 0.3s ease;
+}
+
+.link-card:hover i {
+  transform: scale(1.1);
+}
