@@ -118,13 +118,19 @@ ISC Lizenz
 - E-Mail: info@7sys.de
 - Website: [www.7sys.de](https://www.7sys.de)
 
-
+### Kernkompetenzen
 ![Home](screenshots/screenshot2.png)
+### Weitere Leistungen
 ![Home](screenshots/screenshot3.png)
-![Home](screenshots/screenshot4.png)
+### Beratungsleitungen
 ![Home](screenshots/screenshot5.png)
+### Aktuelle Projekte
 ![Home](screenshots/screenshot6.png)
+### Linkliste
 ![Home](screenshots/screenshot7.png)
+### Wiki
 ![Home](screenshots/screenshot8.png)
+### Downloads
 ![Home](screenshots/screenshot9.png)
+### Kontakt
 ![Home](screenshots/screenshot10.png)
